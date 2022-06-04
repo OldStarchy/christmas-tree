@@ -5,23 +5,26 @@ def tryParse(num):
         return False, 0
 
 
+# initialize
 size = None
 
 
+# prompt user for input  / INPUT
 while (size == None):
     suc, num = tryParse(input('enter size: '))
     if (suc):
         size = num
 
 
+# run / process data     / OUTPUT
 output = ''
-for i in range(size):
+for i in range(size): # loop over each line
     line = ''
 
     for j in range((size - (i + 1))):
         line = line + ' '
     
-    for j in range(i + 1):
+    for j in range(i + 1): # loop over each star in the line
         line = line + '* '
         
     for j in range((size - (i + 1))):
